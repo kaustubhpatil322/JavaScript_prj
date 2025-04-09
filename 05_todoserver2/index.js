@@ -119,4 +119,18 @@ app.delete("/todos/:id" , (req,res)=>{
   })
 })
 
+app.delete("/todos",(req, res)=>{
+  fs.readFile("log.txt" , "utf-8" , (err , data)=>{
+    if(err) throw err;
+    let taskArray = JSON.parse(data);
+    taskArray.splice(0 , taskArray.length);
+    fs.writeFile("log.txt" , JSON.stringify(taskArray) , (err)=>{
+      if(err) throw err;
+      res.json({
+        msg:"All elements deleted successfully"
+      });
+    })
+  })
+})
+
 app.listen(3001);
