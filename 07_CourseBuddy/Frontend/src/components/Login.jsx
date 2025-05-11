@@ -1,3 +1,4 @@
+import styles from "./component.module.css";
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -41,15 +42,12 @@ import axios from 'axios';
         }
     }
     return (
-        <div>
+        <div className={styles.container}>
                 <form onSubmit={handleSubmit}>
 
-                    <h1 style={{background :"rgba(245, 9, 138, 0.59)" , padding:"18px" , position:"relative" , top:"-100px"}}>Login Page</h1>
+                    <h1 className={styles.cont_h1} >Login Page</h1>
 
-                    <div style={{background : 
-                        "cyan" , padding:"18px", 
-                        position:"relative" , 
-                        top:"-80px"}}>
+                    <div >
 
                         <input type="text"
                          value={username}
@@ -59,10 +57,7 @@ import axios from 'axios';
 
                     </div><br />
 
-                    <div style={{background : "rgb(248, 171, 163)",
-                        padding:"18px",
-                        position:"relative",
-                        top:"-70px"}}>
+                    <div>
 
                         <input type="text" 
                                placeholder = "Enter password" 
