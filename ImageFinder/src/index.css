@@ -1,0 +1,256 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.search-input {
+  /* Box Model */
+  padding: 10px 15px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 24px;
+  
+  /* Typography */
+  font-family: inherit;
+  font-size: 16px;
+  color: #333;
+  
+  /* Border & Background */
+  border: 1px solid #ddd;
+  background-color: #fff;
+  outline: none;
+  
+  /* Effects */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Add this to your existing CSS */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  padding: 20px;
+}
+
+.search-input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 2px 10px rgba(74, 144, 226, 0.3);
+}
+
+.search-input::placeholder {
+  color: #aaa;
+}
+
+/* Optional: Add search icon */
+.search-input {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23aaa" width="18px" height="18px"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  padding-left: 40px;
+}
+
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertical centering */
+  min-height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margin */
+} 
+
+/* If you have a container wrapping all components */
+.container {
+  text-align: center; /* Centers inline elements (optional) */
+  padding: 20px;
+}
+
+.title {
+  
+  font-family: 'Arial', sans-serif; /* Or any modern font like 'Inter', 'Poppins' */
+  font-size: 2.5rem; /* Large and prominent */
+  font-weight: 700; /* Bold */
+  color: #333; /* Dark gray for readability */
+  text-align: center; /* Center the text */
+  
+  /* Spacing */
+  margin: 0 0 20px 0; /* Space below the title */
+  padding: 0;
+  
+  
+  background: linear-gradient(90deg, #4a90e2, #8e44ad); 
+  -webkit-background-clip: text; 
+  background-clip: text;
+  color: transparent; 
+  
+  
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  padding: 12px 0;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.filters div {
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: #9f59f4;
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.filters div:hover {
+  background-color: #5f5b5b;
+}
+
+/* For active/selected filter */
+.filters div.active {
+  background-color: #000;
+  color: white;
+}
+
+
+.images-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 10px;
+}
+
+/* Hover Effects */
+.image:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Active/Clicked State */
+.image:active {
+  transform: translateY(-2px);
+}
+
+/* For dark mode compatibility */
+@media (prefers-color-scheme: dark) {
+  .image {
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Special case for portrait images */
+.image.portrait {
+  aspect-ratio: 9/16;
+}
+
+/* Loading state */
+.image.loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.image {
+  flex: 1 1 300px; /* Grow, shrink, minimum width */
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
+
+.nav-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: 2px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
