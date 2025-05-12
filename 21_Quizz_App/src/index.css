@@ -1,0 +1,11 @@
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    height : 100vh;
+    background-image: linear-gradient( rgb(176, 33, 176) , rgb(235, 172, 182));
+    font-family: 'poppins';
+}
