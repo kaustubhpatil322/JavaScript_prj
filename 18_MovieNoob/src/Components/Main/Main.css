@@ -1,0 +1,141 @@
+.scroll-card {
+  position: relative;
+  width: 800px;
+  max-height: 80vh;
+  margin: 2rem auto;
+  background: #1a1a1a;
+  color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  padding: 1.5rem;
+  background: #0d0d0d;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #f5c518;
+  text-align: center;
+}
+
+.card-content {
+  padding: 1.5rem;
+  overflow-y: auto;
+  display: flex;
+  gap: 2rem;
+}
+
+.movie-poster {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.card-content li {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #333;
+  line-height: 1.6;
+}
+
+.card-content li:last-child {
+  border-bottom: none;
+}
+
+.rating-item {
+  margin-top: 1.5rem;
+}
+
+.rating-list {
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+}
+
+.rating-list li {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  border-bottom: none !important;
+  padding: 0.3rem 0;
+}
+
+.rating-source {
+  font-weight: bold;
+  min-width: 100px;
+  color: #cccccc;
+}
+
+.rating-value {
+  color: #f5c518;
+  font-weight: bold;
+}
+
+.card-content p {
+  margin: 0.5rem 0 0 0;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+.card-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.card-content::-webkit-scrollbar-track {
+  background: #2a2a2a;
+}
+
+.card-content::-webkit-scrollbar-thumb {
+  background: #f5c518;
+  border-radius: 4px;
+}
+
+@media (max-width: 900px) {
+  .scroll-card {
+    width: 90%;
+  }
+  
+  .card-content {
+    flex-direction: column;
+  }
+  
+  .movie-poster {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .card-header h3 {
+    font-size: 1.4rem;
+  }
+  
+  .rating-list li {
+    flex-direction: column;
+    gap: 0.2rem;
+    align-items: flex-start;
+  }
+  
+  .rating-source {
+    min-width: auto;
+  }
+}
